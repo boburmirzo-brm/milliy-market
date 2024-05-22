@@ -1,9 +1,14 @@
-import React, {memo} from 'react'
+import React, { memo } from "react";
+import AboutStory from "../../components/story/AboutStory";
+import Creators from "../../components/creators/Creators";
 
 const About = () => {
   return (
-    <div>index</div>
-  )
-}
+    <div>
+      <AboutStory />
+      <Creators />
+    </div>
+  );
+};
 
-export default memo(About)
+export default memo(About);
