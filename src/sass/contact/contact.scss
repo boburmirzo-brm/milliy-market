@@ -1,0 +1,172 @@
+.contact {
+  padding: 150px 0px 140px;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    &__top {
+      a {
+        color: $bg-dark;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 21px;
+        letter-spacing: 0%;
+      }
+      a.active {
+        color: $bg-py;
+      }
+    }
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      @media only screen and (min-width: 900px) {
+        flex-direction: row;
+      }
+      &__left {
+        padding: 40px 35px 20px;
+        width: 100%;
+        border-radius: 4px;
+        box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+        background: $bg-light;
+        @media only screen and (min-width: 570px) {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+        }
+        @media only screen and (min-width: 900px) {
+          display: flex;
+          flex-direction: column;
+          max-width: 340px;
+        }
+        &__top {
+          padding-bottom: 30px;
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          .titles__wrapper {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            .img__wrapper {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 10px;
+              svg {
+                font-size: 20px;
+              }
+              color: $bg-light;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background: $bg-py;
+            }
+            p {
+              color: $bg-dark;
+              font-size: 18px;
+              font-weight: 900;
+              line-height: 24px;
+              letter-spacing: 0%;
+            }
+          }
+          p {
+            color: $bg-dark;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 21px;
+            letter-spacing: 0%;
+          }
+        }
+        .contact__left__top {
+          padding-top: 30px;
+        }
+      }
+      &__right {
+        padding: 15px;
+        width: 100%;
+        max-width: 800px;
+        border-radius: 4px;
+        box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+        background: $bg-light;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        @media only screen and (min-width: 1200px) {
+          padding: 40px 32px;
+        }
+        .input__wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 16px;
+          @media only screen and (min-width: 900px) {
+            flex-direction: row;
+          }
+          .contact__input {
+            width: 100%;
+            background: $bg-secondary;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0%;
+            @media only screen and (min-width: 900px) {
+              max-width: 235px;
+            }
+          }
+        }
+        textarea {
+          width: 100%;
+          border: none;
+          outline: none;
+          padding: 13px 0px 0px 16px;
+          border-radius: 5px;
+          background: $bg-secondary;
+          height: 100px;
+          color: $bg-dark;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: 0%;
+          @media only screen and (min-width: 900px) {
+            height: 150px;
+            font-size: 14px;
+          }
+          @media only screen and (min-width: 1200px) {
+            height: 204px;
+            font-size: 16px;
+          }
+        }
+        button {
+          width: 100%;
+          height: 40px;
+          background: $bg-py;
+          color: rgb(250, 250, 250);
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: 0%;
+          transition: 0.5s;
+          @media only screen and (min-width: 450px) {
+            max-width: 215px;
+          }
+          @media only screen and (min-width: 900px) {
+            font-size: 14px;
+            height: 48px;
+          }
+          @media only screen and (min-width: 1200px) {
+            font-size: 16px;
+            height: 56px;
+          }
+        }
+        button:hover {
+          background: $bg-py;
+        }
+        .contact__btn {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
