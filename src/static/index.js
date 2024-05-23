@@ -10,5 +10,6 @@ export const PRODUCTS = [
         info: [],
         urls: [""],
         available: true,
-    }
+    },
+    
 ]

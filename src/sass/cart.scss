@@ -1,0 +1,202 @@
+@import "./_variable";
+@import "./fonts";
+
+.cart{
+  padding: 80px 100px 100px;
+
+  @media (max-width: 500px) {
+    padding: 0px;
+  }
+  
+  &__pros{
+    display: grid;
+    row-gap: 50px;
+
+    &__titles{
+        width: 1335px;
+        display: flex;
+        padding: 30px 50px 30px;
+        gap: 320px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 0px 0.1px gray;
+
+        @media (max-width: 500px) {
+          width: 500px;
+          padding: 0;
+          padding-left: 20px;
+          gap: 40px;
+        }
+        p{
+          font-weight: 600;
+          font-size: 20px;
+          width: 150px;
+
+          @media (max-width: 500px) {
+            font-size: 15px;
+            width: 100px;
+          }
+        }
+    }
+    &__pro{
+            width: 1335px;
+            height: 100px;
+            display: grid;
+            grid-template-columns: 50px 50px 50px 50px;
+            column-gap: 340px;
+            padding: 29px 50px 10px;
+            box-shadow: 0px 0px 0px 0.1px gray;
+            border-radius: 5px;
+
+            @media (max-width: 500px) {
+              width: 500px;
+              height: 60px;
+              padding-left: 20px;
+              column-gap: 80px;
+              padding-top: 5px;
+            }
+
+            &__title{
+              display: flex;
+              gap: 20px;
+              @media (max-width: 500px) {
+                gap: 10px;
+                padding-top: 10px;
+              }
+
+              img{
+                width: 60px;
+
+                @media (max-width: 500px) {
+                  width: 30px;
+                }
+              }
+
+              p{
+                width: 150px;
+                font-size: 20px;
+                padding-top: 10px;
+
+                @media (max-width: 500px) {
+                  width: 50px;
+                  font-size: 15px;
+                  padding-top: 10px;
+                }
+              }
+            }
+
+            &__price{
+              width: 150px;
+              font-size: 20px;
+              padding-top: 10px;
+
+              @media (max-width: 500px) {
+                width: 50px;
+                font-size: 12px;
+                padding-top: 20px;
+              }
+            }
+
+            &__btns{
+              display: flex;
+              width: 120px;
+              height: 42px;
+              border: 1px solid gray;
+              margin-left: -10px;
+
+              @media (max-width: 500px) {
+                width: 80px;
+                height: 32px;
+                margin-top: 10px;
+              }
+
+              button{
+                width: 40px;
+                height: 40px;
+                font-size: 30px;
+                border: 0px;
+
+                @media (max-width: 500px) {
+                  width: 27px;
+                  height: 30px;
+                  font-size: 20px;
+                }
+              }
+              p{
+                width: 40px;
+                height: 40px;
+                font-size: 25px;
+                padding-left: 12px;
+                padding-top: 6px;
+                background-color: white;
+
+                @media (max-width: 500px) {
+                  width: 26px;
+                  height: 20px;
+                  padding-left: 6px;
+                  padding-top: 1px;
+                }
+              }
+            }
+        }
+
+        &__btns{
+          width: 1335px;
+          display: flex;
+          gap: 930px;
+
+          @media (max-width: 500px) {
+            gap: 100px;
+          }
+
+          &__btn{
+            width: 200px;
+            height: 50px;
+            background: fixed;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+    }
+
+    &__check{
+      padding: 100px 440px 0px;
+
+      @media (max-width: 500px) {
+        padding: 50px 0px 50px;
+      }
+
+      &__total{
+        width: 500px;
+        height: 300px;
+        border: 2px solid;
+        border-radius: 10px;
+        padding: 30px 20px 30px;
+
+        &__title{
+          font-weight: 600;
+          font-size: 20px;
+          margin-bottom: 30px;
+        }
+
+        &__wrap{
+          display: grid;
+          grid-template-columns: 50px 50px;
+          column-gap: 380px;
+          row-gap: 30px;
+          margin-bottom: 30px;
+        }
+
+        &__btn{
+          width: 200px;
+          height: 40px;
+          margin-left: 120px;
+          background: rgba(219, 68, 68, 1);
+          color: whitesmoke;
+          border-radius: 5px;
+          outline: 0px;
+          border: 0px;
+        }
+      }
+    }
+}

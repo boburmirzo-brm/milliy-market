@@ -1,8 +1,11 @@
 import React from 'react'
+import CartWrap from '../../components/cartwrap/CartWrap'
 
 const Cart = () => {
   return (
-    <div>index</div>
+    <>
+      <CartWrap/>
+    </>
   )
 }
 
