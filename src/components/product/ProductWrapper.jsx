@@ -1,15 +1,12 @@
-import React from 'react'
-import Product from './Product'
+import React from "react";
+import Product from "./Product";
 
-const ProductWrapper = ({data}) => {
+const ProductWrapper = ({ data }) => {
   return (
-    <div>
-      <Product/>
-      <Product/>
-      <Product/>
-      <Product/>
+    <div className="product__wrapper container">
+      <Product />
     </div>
-  )
-}
+  );
+};
 
-export default ProductWrapper
+export default ProductWrapper;
