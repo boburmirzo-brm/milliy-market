@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../sass/cart.scss'
 import { PRODUCTS } from '../../static'
 import img from '../../assets/images/templatePhoto.svg'
 
