@@ -4,7 +4,6 @@ import rating from "../../assets/images/detail/rating.png";
 import heart from "../../assets/images/detail/wishlist.png";
 import kamaz from "../../assets/images/detail/kamaz.png";
 import refresh from "../../assets/images/detail/refresh.png";
-import "../../sass/detail.scss";
 
 const Detail = () => {
   return (

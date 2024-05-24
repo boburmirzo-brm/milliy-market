@@ -1,5 +1,4 @@
 import React from 'react'
-import "../../sass/header.scss"
 
 import { FaChevronDown, FaHome, FaRegHeart, FaRegUser } from "react-icons/fa";
 import { CiSearch, CiHeart } from "react-icons/ci";
