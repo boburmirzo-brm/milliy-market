@@ -1,5 +1,4 @@
 import React from 'react'
-import './Login.css'
 import loginimg from '../../assets/images/login/login-img.png'
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
