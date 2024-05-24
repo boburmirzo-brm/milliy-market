@@ -2,7 +2,14 @@ import React, { useState } from 'react'
 import { PatternFormat } from 'react-number-format'
 import { useSelector } from 'react-redux'
 import payments from '../../assets/images/checkout/payment.png'
+import { FormControl, FormControlLabel, Radio, RadioGroup } from '@mui/material'
 const Checkoutcomponent = () => {
+  const [value, setValue] = useState('Bank');
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+  console.log(value);
   const PRODUCTS = [
     {
         id: 1,
@@ -83,17 +90,24 @@ const Checkoutcomponent = () => {
             </div>
         </div>
         <div className="checkpayment">
+        <FormControl>
+      <RadioGroup
+        aria-labelledby="demo-controlled-radio-buttons-group"
+        name="controlled-radio-buttons-group"
+        value={value}
+        onChange={handleChange}
+      >
           <div className='checkspace'>
           <div>
-          <input type="radio" name="" id="" />
-          <p>Bank</p>
+          <FormControlLabel value="Bank" control={<Radio />} label="Bank" />
           </div>
           <img src={payments} alt="" />
           </div>
           <div>
-          <input type="radio" name="" id=""  />
-          <p>Cash on delivery</p>
+          <FormControlLabel value="Cash on delivery" control={<Radio />} label="Cash on delivery" />
           </div>
+          </RadioGroup>
+          </FormControl>
         </div>
         <div className='checkpromo'>
             <input type="text" name="" id="" placeholder='Coupon Code' />

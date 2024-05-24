@@ -111,6 +111,7 @@
         width: 50%;
     }
     div{
+        width: 100%;
         display: flex;
         align-items: center;
         gap: 10px;
@@ -158,6 +159,8 @@
     font-size: 14px;
 }
 .checkout{
+    padding-top: 150px;
+    padding-bottom: 100px;
     p{
         color: $bg-dark;
     }
