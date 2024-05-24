@@ -5,7 +5,7 @@ import heart from "../../assets/images/detail/wishlist.png";
 import kamaz from "../../assets/images/detail/kamaz.png";
 import refresh from "../../assets/images/detail/refresh.png";
 
-const Detail = () => {
+const DetailProduct = () => {
   return (
     <>
       <div className="detail__info">
@@ -71,4 +71,4 @@ const Detail = () => {
   );
 };
 
-export default memo(Detail);
+export default memo(DetailProduct);

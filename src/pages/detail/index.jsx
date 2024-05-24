@@ -1,11 +1,11 @@
 import React, { memo } from "react";
-import Detail from "../../components/detail/Detail";
+import DetailProduct from "../../components/detail-product/DetailProduct";
 
 const Detail = () => {
   return (
     <section className="detail">
       <div className="container">
-        <Detail />
+        <DetailProduct />
       </div>
     </section>
   );
