@@ -1,0 +1,218 @@
+@import "./_variable";
+@import "./fonts";
+
+.detail {
+  padding: 80px 0px 140px;
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 70px;
+    @media (max-width: 1170px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @media (max-width: 700px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      order: 1;
+    }
+  }
+  &__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    @media (max-width: 700px) {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      order: 1;
+      gap: 5px;
+    }
+  }
+  &__image {
+    max-width: 170px;
+    padding: 12px 25px;
+    @media (max-width: 700px) {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+    @media (max-width: 500px) {
+      width: 80px;
+    }
+  }
+  &__img {
+    max-width: 446px;
+    @media (max-width: 700px) {
+      width: 100%;
+    }
+  }
+  &__title {
+    font-family: roboto-bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: $bg-dark;
+    margin-bottom: 15px;
+  }
+  &__ratings {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  &__reviews {
+    color: $bg-dark;
+    font-family: roboto-regular;
+    font-size: 14px;
+    line-height: 21px;
+    opacity: 0.5;
+  }
+  &__stock {
+    font-family: roboto-regular;
+    color: #00ff66;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  &__price {
+    margin-bottom: 24px;
+    color: $bg-dark;
+    font-family: roboto-regular;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  &__text {
+    margin-bottom: 24px;
+    color: $bg-dark;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  &__hr {
+    height: 1px;
+    width: 100%;
+    background-color: $bg-dark;
+    border-radius: 1px;
+    opacity: 0.5;
+    margin-bottom: 124px;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    @media (max-width: 420px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+  }
+  &__pm {
+    padding: 18px 12px;
+    width: 40px;
+    height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #00000080;
+    color: $bg-dark;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 500ms;
+    &:first-child {
+      border-radius: 4px 0px 0px 4px;
+    }
+    &:last-child {
+      border-radius: 0px 4px 4px 0px;
+    }
+    &:hover {
+      background-color: $bg-py;
+      color: #ffffff;
+      border: 1px solid $bg-py;
+    }
+  }
+  &__quantity {
+    padding: 18px 12px;
+    width: 80px;
+    height: 44px;
+    border: 1px solid #00000080;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $bg-dark;
+    font-size: 22px;
+  }
+  &__buy {
+    width: 165px;
+    height: 44px;
+    border: 1px solid $bg-py;
+    border-radius: 4px;
+    background-color: $bg-py;
+    color: #ffffff;
+    font-family: roboto-medium;
+    font-size: 16px;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 48px;
+    transition: all 500ms;
+    &:hover {
+      color: $bg-py;
+      background-color: #ffffff;
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  &__exam {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 28px 16px;
+    &:first-child {
+      border: 2px solid #00000080;
+      border-radius: 4px 4px 0px 0px;
+    }
+    &:last-child {
+      border: 2px solid #00000080;
+      border-top: none;
+      border-radius: 0px 0px 4px 4px;
+    }
+  }
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &__title {
+      font-family: roboto-medium;
+      font-size: 16px;
+      line-height: 24px;
+      color: $bg-dark;
+    }
+    &__text {
+      color: $bg-dark;
+      text-decoration: underline;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
