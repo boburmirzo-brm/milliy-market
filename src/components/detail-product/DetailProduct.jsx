@@ -1,24 +1,36 @@
-import React, { memo } from "react";
+import React, { memo, useState } from "react";
 import pr from "../../assets/images/detail/pr.png";
 import rating from "../../assets/images/detail/rating.png";
 import heart from "../../assets/images/detail/wishlist.png";
 import kamaz from "../../assets/images/detail/kamaz.png";
 import refresh from "../../assets/images/detail/refresh.png";
+import { PRODUCTS } from "../../static";
 
 const DetailProduct = () => {
+  const [img, setImg] = useState(0);
+
   return (
     <>
-      <div className="detail__info">
-        <div className="detail__right">
-          <div className="detail__images">
-            <img src={pr} alt="product__image" className="detail__image" />
-            <img src={pr} alt="product__image" className="detail__image" />
-            <img src={pr} alt="product__image" className="detail__image" />
-            <img src={pr} alt="product__image" className="detail__image" />
-          </div>
-          <img src={pr} alt="product__img" className="detail__img" />
-        </div>
+      <div className="detail__wrapper">
         <div className="detail__left">
+          <div className="detail__images">
+            {PRODUCTS?.map((el) => (
+              <img
+                key={el.id}
+                onClick={() => setImg(el.urls[0])}
+                src={el.urls[0]}
+                alt="product__image"
+                className="detail__image"
+              />
+            ))}
+          </div>
+          <img
+            src={img ? img : pr}
+            alt="product__img"
+            className="detail__img"
+          />
+        </div>
+        <div className="detail__context">
           <h2 className="detail__title">Havic HV G-92 Gamepad</h2>
           <div className="detail__ratings">
             <img
