@@ -6,18 +6,21 @@
 
 .wishlist {
     padding: 40px 70px;
-    .wishlist_txt{
+
+    .wishlist_txt {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 60px 0px;
-        .strong_txt{
-            strong{
+
+        .strong_txt {
+            strong {
                 font-size: 20px;
             }
         }
-        .button_wishlist{
-            button{
+
+        .button_wishlist {
+            button {
                 width: 200px;
                 border-radius: 5px;
                 border: 1px solid black;
@@ -25,21 +28,25 @@
                 background-color: #fff;
                 height: 50px;
             }
-            button:hover{
+
+            button:hover {
                 background-color: #000;
                 color: #fff;
             }
         }
     }
+
     .cards {
         display: grid;
         gap: 40px;
         grid-template-columns: repeat(4, 1fr);
-        .card{
-            .type{
+
+        .card {
+            .type {
                 color: red;
             }
-            button{
+
+            button {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -51,23 +58,27 @@
                 height: 40px;
                 font-size: 14px;
             }
-            button:hover{
+
+            button:hover {
                 background-color: #fff;
                 color: #000;
                 border: 1px solid black;
             }
         }
     }
+
     .cards_2 {
         display: grid;
         margin-top: 40px;
         gap: 40px;
         grid-template-columns: repeat(4, 1fr);
-        .card{
-            .type{
+
+        .card {
+            .type {
                 color: red;
             }
-            button{
+
+            button {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -79,7 +90,8 @@
                 height: 40px;
                 font-size: 14px;
             }
-            button:hover{
+
+            button:hover {
                 background-color: #fff;
                 color: #000;
                 border: 1px solid black;
@@ -88,36 +100,43 @@
     }
 }
 
-.not_found{
+.not_found {
     padding: 40px 70px;
-    .txt{
-        strong{
+
+    .txt {
+        strong {
             font-size: 14px;
         }
     }
-    .found{
+
+    .found {
         margin-top: 100px;
         text-align: center;
         padding: 10px;
-        strong{
+
+        strong {
             font-size: 110px;
         }
-        p{
+
+        p {
             font-size: 16px;
         }
-        button{
+
+        button {
             background-color: #DB4444;
             border: none;
             border-radius: 3px;
             color: #fff;
             width: 250px;
             height: 50px;
-            .link{
+
+            .link {
                 text-decoration: none;
                 font-size: 16px;
             }
         }
-        button:hover{
+
+        button:hover {
             background-color: #fff;
             border: 1px solid #DB4444;
             color: #DB4444;
@@ -126,21 +145,24 @@
     }
 }
 
-@media (min-width:1500px) and (max-width:2000px){
+@media (min-width:1500px) and (max-width:2000px) {
     .wishlist {
         padding: 40px 70px;
-        .wishlist_txt{
+
+        .wishlist_txt {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 60px 0px;
-            .strong_txt{
-                strong{
+
+            .strong_txt {
+                strong {
                     font-size: 20px;
                 }
             }
-            .button_wishlist{
-                button{
+
+            .button_wishlist {
+                button {
                     width: 200px;
                     border-radius: 5px;
                     border: 1px solid black;
@@ -148,21 +170,25 @@
                     background-color: #fff;
                     height: 50px;
                 }
-                button:hover{
+
+                button:hover {
                     background-color: #000;
                     color: #fff;
                 }
             }
         }
+
         .cards {
             display: grid;
             gap: 40px;
             grid-template-columns: repeat(4, 1fr);
-            .card{
-                .type{
+
+            .card {
+                .type {
                     color: red;
                 }
-                button{
+
+                button {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -174,23 +200,27 @@
                     height: 40px;
                     font-size: 14px;
                 }
-                button:hover{
+
+                button:hover {
                     background-color: #fff;
                     color: #000;
                     border: 1px solid black;
                 }
             }
         }
+
         .cards_2 {
             display: grid;
             margin-top: 40px;
             gap: 40px;
             grid-template-columns: repeat(4, 1fr);
-            .card{
-                .type{
+
+            .card {
+                .type {
                     color: red;
                 }
-                button{
+
+                button {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -202,7 +232,8 @@
                     height: 40px;
                     font-size: 14px;
                 }
-                button:hover{
+
+                button:hover {
                     background-color: #fff;
                     color: #000;
                     border: 1px solid black;
@@ -210,37 +241,44 @@
             }
         }
     }
-    
-    .not_found{
+
+    .not_found {
         padding: 40px 70px;
-        .txt{
-            strong{
+
+        .txt {
+            strong {
                 font-size: 14px;
             }
         }
-        .found{
+
+        .found {
             margin-top: 100px;
             text-align: center;
             padding: 10px;
-            strong{
+
+            strong {
                 font-size: 110px;
             }
-            p{
+
+            p {
                 font-size: 16px;
             }
-            button{
+
+            button {
                 background-color: #DB4444;
                 border: none;
                 border-radius: 3px;
                 color: #fff;
                 width: 250px;
                 height: 50px;
-                .link{
+
+                .link {
                     text-decoration: none;
                     font-size: 16px;
                 }
             }
-            button:hover{
+
+            button:hover {
                 background-color: #fff;
                 border: 1px solid #DB4444;
                 color: #DB4444;
@@ -249,6 +287,9 @@
         }
     }
 }
+
+@import "./components/login.scss";
+
 @import "checkout";
 @import "./about.scss";
 @import "products";
