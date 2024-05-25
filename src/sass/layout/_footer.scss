@@ -1,6 +1,7 @@
 .footer {
   background-color: black;
   padding: 40px 0;
+
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -88,6 +89,10 @@
   }
 }
 
+
+
+
+
 .copyright {
   background-color: black;
   padding: 10px 0;
@@ -100,8 +105,85 @@
   }
 }
 
+.footer__response {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+
+  .footer__items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    p {
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .images img {
+      width: 100px;
+    }
+
+    .footer__navigation {
+      display: flex;
+      justify-content: space-between;
+      width: 500px;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+
+      button {
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        color: #00000052;
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 900;
+      }
+    }
+
+    .footer__links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      li {
+        font-size: 15px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .footer__items .footer__navigation {
+      width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    .footer__items .footer__navigation {
+      width: 200px;
+    }
+  }
+}
+.footer__response {
+  display: none;
+
+  .images {
+    display: flex;
+
+    .apps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
 @media (max-width: 1400px) {
-  footer {
+  .footer {
     padding: 40px 60px;
   }
 
@@ -111,7 +193,7 @@
 }
 
 @media (max-width: 768px) {
-  footer {
+  .footer {
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
@@ -119,6 +201,26 @@
 
   .wrapper {
     margin: 20px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    display: none;
+  }
+
+  .footer__response {
+    display: flex;
+
+    .images {
+      display: flex;
+
+      .apps {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   }
 }
 
