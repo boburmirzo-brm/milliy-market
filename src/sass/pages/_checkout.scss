@@ -2,18 +2,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: start;
+    margin: 0 auto;
+    width: 100%;
 }
 .checkoutcomponent{
     display: flex;
-    width: 80%;
+    width: 100%;
     justify-content: space-between;
+    position: relative;
 }
 .checkinputs{
     display: flex;
     flex-direction: column;
     gap: 25px;
     width: 40%;
+    position: sticky;
+    top: 200px;
+    align-self: flex-start;
     div{
         display: flex;
         flex-direction: column;
@@ -29,7 +36,6 @@
         input{
             width: 100%;
             height: 50px;
-            // background: rgba(245, 245, 245, 1);
             background: $bg-sy;
             border: none;
             border-radius: 5px;
@@ -51,7 +57,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 30px;
+    // gap: 30px;
     p{
         font-weight: 600;
     }
@@ -60,6 +66,7 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    padding-bottom: 5px;
     li{
         display: flex;
     width: 80%;
@@ -83,11 +90,29 @@
     }
     }
 }
+.checkseemore{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    button{
+        width: 100px;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        background: $bg-py;
+        color: $bg-light;
+        font-size: 80%;
+        font-weight: 600;
+    }
+}
 .totalprice{
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    padding-bottom: 30px;
     hr{
         width: 80%;
         color: $bg-dark;
@@ -102,42 +127,20 @@
     justify-content: space-between;
     }
 }
-.checkpayment{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    gap: 10px;
-    img{
-        width: 50%;
-    }
-    div{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    .checkspace{
-        justify-content: space-between;
-    }
-    input{
-        width: 18px;
-        height: 18px;
-        color: $bg-dark;
-        background: $bg-dark;
-        
-    }
-}
+
 .checkpromo{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 30px;
     input{
         width: 60%;
         height: 50px;
         padding-left: 10px;
         font-size: 15px;
         border-radius: 5px;
+        border: 1px solid gray;
     }
     button{
         width: 35%;
@@ -159,39 +162,21 @@
     font-size: 14px;
 }
 .checkout{
-    padding-top: 150px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     p{
         color: $bg-dark;
     }
     .navigate{
-        width: 80%;
+        width: 100%;
         padding-top: 50px;
         font-size: small;
     }
     .checktitle{
-        width: 80%;
+        width: 100%;
         padding-top: 40px;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
         font-size: 34px;
         font-weight: bolder;
-    }
-}
-@media screen and (max-width: 565px){
-    .checkpayment{
-        width: 100%;
-        padding-top: 30px;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        div{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
     }
 }
 @media screen and (max-width: 675px){
@@ -206,6 +191,16 @@
             align-items: center;
             text-align: center;
             width: 100%;
+            div{
+                flex-direction: column;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .checkprss{
+                width: auto;
+            }
         }
     }
 }
@@ -217,6 +212,14 @@
             flex-direction: column;
            }
         }
+    }
+}
+@media screen and (max-width: 1105px){
+    .checkprss{
+        span{
+           display: none;
+        }
+
     }
 }
 @media screen and (max-width: 450px){
@@ -246,6 +249,25 @@
         input{
             width: 100%;
         }
+    }
+    .totalprice{
+        width: 100%;
+        div,hr{
+            width: 100%;
+        }
+    }
+    .checkproducts{
+        width: 55%;
+        ul{
+            width: 100%;
+            li{
+                width: 100%;
+            }
+        }
+        
+    }
+    .checkseemore{
+        width: 100%;
     }
     .checkorder{
         width: 100%;
