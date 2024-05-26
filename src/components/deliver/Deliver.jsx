@@ -24,9 +24,9 @@ let DELEV = [
 ];
 const Deliver = () => {
   let delev = DELEV?.map((el) => (
-    <div key={el.id} className="delev__card">
+    <div key={el.id} className="delevir__card">
       <img src={el.img} alt="" />
-      <p className="title">{el.title}</p>
+      <p className="delevir__title">{el.title}</p>
       <p>{el.paragh}</p>
     </div>
   ));
