@@ -110,15 +110,18 @@
   flex-direction: column;
   align-items: center;
   transition: opacity 0.3s ease-in-out;
+  color: $bg-light;
+  background-color: $bg-dark;
 
   .footer__items {
     display: flex;
     flex-direction: column;
     gap: 5px;
 
-    p {
+    p, .plus {
       font-size: 20px;
       font-weight: 900;
+      color: $bg-light;
     }
 
     .images img {
@@ -173,11 +176,28 @@
 
   .images {
     display: flex;
-
-    .apps {
+    justify-content: space-around;
+    .install{
       display: flex;
       flex-direction: column;
-      align-items: center;
+    }
+    .icons{
+      margin-top: 15px;
+      .icon{
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: $bg-dark;
+        background-color: $bg-light;
+        margin-left: 5px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          transition: 0.3s ease-in-out;
+          transform: scale(1.2);
+        }
+      }
     }
   }
 }

@@ -123,7 +123,7 @@ const Footer = () => {
               <div className="footer__navigation">
                 <p>{section.title}</p>
                 <button onClick={() => toggleLinks(index)} style={buttonStyle}>
-                  <AiOutlinePlus />
+                  <AiOutlinePlus className="plus" />
                 </button>
               </div>
               <ul className="footer__links" style={linkStyle}>
@@ -142,20 +142,21 @@ const Footer = () => {
           );
         })}
         <div className="footer__items app">
-          <p className="title">Download App</p>
-          <p>Save $3 with App New User Only</p>
+          <br />
+          <p className="title">Download App Save $3 with App New User Only</p>
+          <p></p>
           <div className="images">
             <img src={qr} alt="qr-code" />
-            <div className="apps">
+            <div className="apps install">
               <img src={app1} alt="app" />
               <img src={app2} alt="app" />
+              <div className="icons">
+                <FaFacebookF className="icon" />
+                <FaTwitter className="icon" />
+                <FaInstagram className="icon" />
+                <FaLinkedinIn className="icon" />
+              </div>
             </div>
-          </div>
-          <div className="icons">
-            <FaFacebookF />
-            <FaTwitter />
-            <FaInstagram />
-            <FaLinkedinIn />
           </div>
         </div>
       </div>
