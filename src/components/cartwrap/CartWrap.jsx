@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 function CartWrap() {
-    const [count, setCount] = useState(1)
+    const [count, setCount] = useState(1)   
 
     return (
         <>
@@ -27,9 +27,9 @@ function CartWrap() {
                                 <strong>{product.title}</strong>
                                 <strong>${product.price}</strong>
                                 <div className='btn_counts'>
-                                    <button className='btn_plus' onClick={() => setCount(count - 1)}>-</button>
+                                    <button className='btn_minus' onClick={() => setCount(count - 1)}>-</button>
                                     <strong className='strong_count'>{count}</strong>
-                                    <button className='btn_minus' onClick={() => setCount(count + 1)}>+</button>
+                                    <button className='btn_plus' onClick={() => setCount(count + 1)}>+</button>
                                 </div>
                                 <strong>${product.price * count}</strong>
                             </div>
@@ -51,7 +51,7 @@ function CartWrap() {
                         <br />
                         <div>
                             <strong>Subtotal:</strong>
-                            <strong>$1750</strong>
+                            <strong>$4320</strong>
                         </div>
                         <br />
                         <div>
@@ -61,7 +61,7 @@ function CartWrap() {
                         <br />
                         <section className='total'>
                             <strong>Total:</strong>
-                            <strong>$1750</strong>
+                            <strong>$4320</strong>
                         </section>
                         <section className='div'>
                             <Link to={"/checkout"}><button>Procees to checkout</button></Link>

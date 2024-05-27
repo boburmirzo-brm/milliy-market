@@ -23,7 +23,7 @@
     .btn_counts {
       border: 1px solid #c9b3b3;
 
-      .btn_plus {
+      .btn_minus {
         width: 30px;
         height: 30px;
         border: none;
@@ -35,7 +35,7 @@
         padding: 0px 20px;
       }
 
-      .btn_minus {
+      .btn_plus {
         border: none;
         width: 30px;
         background-color: #DB4444;
@@ -137,11 +137,14 @@
   }
 }
 
-@media (min-width: 1400px) and (max-width: 1470px ){
+@media (min-width: 1400px) and (max-width: 2000px ){
   .cart{
     display: flex;
     flex-direction: column;
-    padding: 0px 180px;
+    padding: 0px 450px;
+  }
+  .cart_link{
+    padding: 50px 420px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1399px ){
