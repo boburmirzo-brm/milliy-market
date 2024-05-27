@@ -1,10 +1,9 @@
 import React from 'react'
-import CartWrap from '../../components/cartwrap/CartWrap'
 
 const Cart = () => {
   return (
     <>
-      <CartWrap/>
+    <h2>Cart</h2>
     </>
   )
 }
