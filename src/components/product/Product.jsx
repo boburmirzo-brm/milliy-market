@@ -8,7 +8,7 @@ const Product = () => {
       {PRODUCTS?.map((el) => (
         <div key={el.id} className="product__card">
           <div className="product__card-img">
-            <img src={el.urls} alt="" />
+            <img src={el.urls[0]} alt="" />
             <div className="product__card-img-hover">
               <FaRegHeart />
               <FaRegEye />
