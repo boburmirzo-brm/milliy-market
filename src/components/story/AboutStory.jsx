@@ -3,8 +3,8 @@ import story from "../../assets/images/about/story.png";
 const AboutStory = () => {
   return (
     <div className="container about__story">
-      <div className="left">
-        <p className="title">
+      <div className="about__content">
+        <p className="about__title">
           <b>Bizning Hikoya</b>
         </p>
         <p>
@@ -21,7 +21,7 @@ const AboutStory = () => {
           tortib toifadagi turli assortimentni taklif etadi.
         </p>
       </div>
-      <div className="right">
+      <div className="about__img">
         <img src={story} alt="" />
       </div>
     </div>

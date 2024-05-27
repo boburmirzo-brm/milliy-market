@@ -28,14 +28,14 @@ const Creators = () => {
   let creator = CREATORS?.map((el) => (
     <div key={el.id} className="creator__card">
       <img src={el.img} alt="" />
-      <p className="name">
+      <p className="creator__name">
         <b>{el.name}</b>
       </p>
       <p>{el.job}</p>
-      <div className="icons">
-        <CiTwitter className="icon" />
-        <CiInstagram className="icon" />
-        <CiLinkedin className="icon" />
+      <div className="creator__icons">
+        <CiTwitter className="creator__icon" />
+        <CiInstagram className="creator__icon" />
+        <CiLinkedin className="creator__icon" />
       </div>
     </div>
   ));
