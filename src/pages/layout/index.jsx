@@ -1,16 +1,16 @@
-import React, {memo} from 'react'
+import React, { memo } from 'react'
 import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
 import { Outlet } from 'react-router-dom'
+import SubHeader from '../../components/sub-header/SubHeader'
 
 const Layout = () => {
   return (
     <>
-      <Header/> 
-      <main className='main'>
-        <Outlet/>
-      </main>
-      <Footer/> 
+      <SubHeader />
+      <Header />
+      <Outlet />
+      <Footer />
     </>
   )
 }
