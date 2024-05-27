@@ -12,7 +12,6 @@ const Header = () => {
   const [search, setSearch] = useState(false)
   const [searchValue, setSearchValue] = useState("")
 
-  console.log(searchValue);
 
   useEffect(() => {
     if (searchValue !== "") {
@@ -21,7 +20,7 @@ const Header = () => {
   }, [searchValue])
 
   const handleNavShrink = () => {
-    if (window.scrollY > 48) {
+    if (window.scrollY > 0) {
       setNavShrink(true)
     } else {
       setNavShrink(false)
