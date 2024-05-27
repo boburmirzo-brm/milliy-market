@@ -1,170 +1,197 @@
 .contact {
-  padding: 150px 0px 140px;
-  &__wrapper {
+  padding: 30px 0;
+  &__content__wrapper {
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    &__top {
-      a {
-        color: $bg-dark;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 21px;
-        letter-spacing: 0%;
-      }
+    gap: 30px;
+    .contact__link {
       a.active {
-        color: $bg-py;
+        color: $bg-brown;
       }
     }
-    &__bottom {
+  }
+  &__wrapper {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    @media only screen and (min-width: 900px) {
+      flex-direction: row;
+    }
+    &__left {
       display: flex;
       flex-direction: column;
       gap: 30px;
-      @media only screen and (min-width: 900px) {
+      padding: 40px 35px 51px;
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+      background: $bg-light;
+      @media only screen and (min-width: 500px) {
         flex-direction: row;
+        justify-content: space-between;
       }
-      &__left {
-        padding: 40px 35px 20px;
-        width: 100%;
-        border-radius: 4px;
-        box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
-        background: $bg-light;
-        @media only screen and (min-width: 570px) {
+      @media only screen and (min-width: 900px) {
+        flex-direction: column;
+        height: 457px;
+        max-width: 340px;
+      }
+      .contact__left__top {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        &__title {
           display: flex;
           align-items: center;
-          gap: 20px;
-        }
-        @media only screen and (min-width: 900px) {
-          display: flex;
-          flex-direction: column;
-          max-width: 340px;
-        }
-        &__top {
-          padding-bottom: 30px;
-          display: flex;
-          flex-direction: column;
-          gap: 24px;
-          .titles__wrapper {
+          gap: 16px;
+          .logo__wrapper {
             display: flex;
             align-items: center;
-            gap: 16px;
-            .img__wrapper {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              padding: 10px;
-              svg {
-                font-size: 20px;
-              }
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 31px;
+            background: rgb(219, 68, 68);
+            svg {
+              width: 20px;
+              height: 20px;
               color: $bg-light;
-              width: 40px;
-              height: 40px;
-              border-radius: 50%;
-              background: $bg-py;
-            }
-            p {
-              color: $bg-dark;
-              font-size: 18px;
-              font-weight: 900;
-              line-height: 24px;
-              letter-spacing: 0%;
             }
           }
-          p {
+          h5 {
             color: $bg-dark;
             font-size: 16px;
             font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0%;
+          }
+        }
+        &__text {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          p {
+            color: $bg-dark;
+            font-size: 14px;
+            font-weight: 500;
             line-height: 21px;
             letter-spacing: 0%;
           }
         }
-        .contact__left__top {
-          padding-top: 30px;
+      }
+      .line {
+        width: 100%;
+        height: 2px;
+        background-color: rgb(190, 186, 186);
+        @media only screen and (min-width: 500px) {
+          display: none;
+        }
+        @media only screen and (min-width: 900px) {
+          display: flex;
         }
       }
-      &__right {
-        padding: 15px;
-        width: 100%;
-        max-width: 800px;
-        border-radius: 4px;
-        box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
-        background: $bg-light;
+    }
+    &__right {
+      padding: 40px 25px;
+
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+      background: $bg-light;
+      @media only screen and (min-width: 1200px) {
+        width: 785px;
+        height: 457px;
+      }
+      .contact__form {
         display: flex;
         flex-direction: column;
         gap: 32px;
-        @media only screen and (min-width: 1200px) {
-          padding: 40px 32px;
-        }
-        .input__wrapper {
+        &__input__wrapper {
           display: flex;
-          flex-direction: column;
           align-items: center;
+          flex-direction: column;
           gap: 16px;
-          @media only screen and (min-width: 900px) {
+          @media only screen and (min-width: 700px) {
             flex-direction: row;
           }
-          .contact__input {
+          input {
+            position: relative;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            background-color: $bg-secondary;
+            padding-left: 16px;
             width: 100%;
-            background: $bg-secondary;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: 0%;
-            @media only screen and (min-width: 900px) {
+            height: 50px;
+            font-size: 14px;
+            @media only screen and (min-width: 1200px) {
               max-width: 235px;
             }
           }
+          input::placeholder {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0%;
+            transition: 0.5s;
+          }
+          input:focus::placeholder {
+            position: absolute;
+            top: 0px;
+            left: 5px;
+            font-size: 12px;
+            color: $bg-brown;
+          }
+          input:focus {
+            border: 1px solid $bg-brown;
+          }
         }
         textarea {
+          padding: 13px 0px 0px 16px;
           width: 100%;
+          height: 120px;
+          border-radius: 4px;
+          background: $bg-secondary;
           border: none;
           outline: none;
-          padding: 13px 0px 0px 16px;
-          border-radius: 5px;
-          background: $bg-secondary;
-          height: 100px;
-          color: $bg-dark;
-          font-weight: 500;
+          resize: none;
+          font-size: 14px;
+          @media only screen and (min-width: 900px) {
+            max-width: 737px;
+            height: 207px;
+          }
+        }
+        textarea::placeholder {
+          font-size: 14px;
+          font-weight: 400;
           line-height: 24px;
           letter-spacing: 0%;
-          @media only screen and (min-width: 900px) {
-            height: 150px;
-            font-size: 14px;
-          }
-          @media only screen and (min-width: 1200px) {
-            height: 204px;
-            font-size: 16px;
-          }
         }
-        button {
-          width: 100%;
-          height: 40px;
-          background: $bg-py;
-          color: rgb(250, 250, 250);
-          font-size: 12px;
-          font-weight: 500;
-          line-height: 24px;
-          letter-spacing: 0%;
-          transition: 0.5s;
-          @media only screen and (min-width: 450px) {
-            max-width: 215px;
-          }
-          @media only screen and (min-width: 900px) {
-            font-size: 14px;
-            height: 48px;
-          }
-          @media only screen and (min-width: 1200px) {
-            font-size: 16px;
-            height: 56px;
-          }
+        textarea:focus::placeholder {
+          color: $bg-brown;
         }
-        button:hover {
-          background: $bg-py;
+        textarea:focus {
+          border: 1px solid $bg-brown;
         }
-        .contact__btn {
+        &__btn {
           display: flex;
           align-items: center;
           justify-content: flex-end;
+          button {
+            width: 100%;
+            height: 40px;
+            max-width: 180px;
+            background-color: $bg-brown;
+            color: rgb(250, 250, 250);
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0%;
+            @media only screen and (min-width: 900px) {
+              font-size: 14px;
+              max-width: 215px;
+              height: 50px;
+            }
+          }
         }
       }
     }
