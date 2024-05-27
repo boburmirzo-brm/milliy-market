@@ -1,7 +1,6 @@
-
 .detail {
-  padding: 80px 0px 140px;
-  &__info {
+  padding: 30px 0px 50px;
+  &__wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -12,15 +11,15 @@
       justify-content: center;
     }
   }
-  &__right {
+  &__left {
     display: flex;
     align-items: center;
     gap: 30px;
     @media (max-width: 700px) {
+      width: 100%;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      order: 1;
     }
   }
   &__images {
@@ -29,30 +28,38 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
+    max-height: 315px;
+    overflow-y: scroll;
     @media (max-width: 700px) {
       width: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: center;
       order: 1;
       gap: 5px;
+      overflow: auto;
     }
   }
   &__image {
     max-width: 170px;
     padding: 12px 25px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    border: 1px solid #00000080;
     @media (max-width: 700px) {
-      width: 100px;
-      height: 100px;
+      height: 140px;
       object-fit: contain;
-    }
-    @media (max-width: 500px) {
-      width: 80px;
     }
   }
   &__img {
-    max-width: 446px;
+    max-height: 350px;
+    object-fit: contain;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    border: 1px solid;
+    max-width: 350px;
+    padding: 30px;
+    border: 1px solid #00000080;
     @media (max-width: 700px) {
       width: 100%;
     }
@@ -63,22 +70,28 @@
     line-height: 24px;
     color: $bg-dark;
     margin-bottom: 15px;
+    @media (max-width: 400px) {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   }
   &__ratings {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     margin-bottom: 16px;
   }
   &__reviews {
     color: $bg-dark;
-    font-family: roboto-regular;
+    font-family: roboto-light;
     font-size: 14px;
     line-height: 21px;
     opacity: 0.5;
   }
   &__stock {
-    font-family: roboto-regular;
+    font-family: roboto-light;
     color: #00ff66;
     font-size: 14px;
     line-height: 21px;
@@ -86,11 +99,12 @@
   &__price {
     margin-bottom: 24px;
     color: $bg-dark;
-    font-family: roboto-regular;
+    font-family: roboto-light;
     font-size: 24px;
     line-height: 24px;
   }
   &__text {
+    font-family: roboto-light;
     margin-bottom: 24px;
     color: $bg-dark;
     font-size: 14px;
@@ -102,7 +116,7 @@
     background-color: $bg-dark;
     border-radius: 1px;
     opacity: 0.5;
-    margin-bottom: 124px;
+    margin-bottom: 30px;
   }
   &__box {
     display: flex;
@@ -163,7 +177,7 @@
     border-radius: 4px;
     background-color: $bg-py;
     color: #ffffff;
-    font-family: roboto-medium;
+    font-family: roboto-bold;
     font-size: 16px;
     line-height: 25px;
     display: flex;
@@ -187,11 +201,11 @@
     gap: 16px;
     padding: 28px 16px;
     &:first-child {
-      border: 2px solid #00000080;
+      border: 1px solid #00000080;
       border-radius: 4px 4px 0px 0px;
     }
     &:last-child {
-      border: 2px solid #00000080;
+      border: 1px solid #00000080;
       border-top: none;
       border-radius: 0px 0px 4px 4px;
     }
@@ -201,7 +215,7 @@
     flex-direction: column;
     gap: 8px;
     &__title {
-      font-family: roboto-medium;
+      font-family: roboto-light;
       font-size: 16px;
       line-height: 24px;
       color: $bg-dark;
@@ -209,6 +223,7 @@
     &__text {
       color: $bg-dark;
       text-decoration: underline;
+      font-family: roboto-light;
       font-size: 12px;
       line-height: 18px;
     }
