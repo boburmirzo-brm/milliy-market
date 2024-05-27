@@ -1,0 +1,156 @@
+.homeCollection {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin: 55px auto;
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            gap: 10px;
+            justify-content: flex-end;
+            padding: 0px 0px 32px 32px;
+            background: url(../assets/homeImages/homeCoolectionleft.png) no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            max-width: 550px;
+            height: 530px;
+            background-color: #000;
+            margin: 0 auto;
+
+            h4 {
+                color: rgb(250, 250, 250);
+                font-family: Inter;
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 24px;
+                letter-spacing: 3%;
+            }
+
+            p {
+                width: 100%;
+                max-width: 242px;
+                color: rgb(250, 250, 250);
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                letter-spacing: 0%;
+            }
+
+            button {
+                border: none;
+                outline: none;
+                color: rgb(255, 255, 255);
+                font-family: Poppins;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0%;
+                width: 100px;
+                background-color: transparent;
+                text-decoration: underline;
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 0 auto;
+
+            &__top {
+                display: flex;
+                color: white;
+                flex-direction: column;
+                gap: 10px;
+                padding: 0px 0px 24px 24px;
+                justify-content: flex-end;
+                background: url(../assets/homeImages/homecollectionrighttop.png) no-repeat;
+                background-position: center;
+                background-size: cover;
+                width: 550px;
+                height: 250px;
+
+                h4 {
+                    color: rgb(250, 250, 250);
+                    font-family: Inter;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: 3%;
+                }
+
+                p {
+                    width: 100%;
+                    max-width: 255px;
+                    color: rgb(250, 250, 250);
+                    font-family: Poppins;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 21px;
+                    letter-spacing: 0%;
+                }
+
+                button {
+                    border: none;
+                    outline: none;
+                    color: rgb(255, 255, 255);
+                    font-family: Poppins;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0%;
+                    text-decoration: underline;
+                }
+            }
+
+            &__bottom {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                width: 550px;
+
+                .bottom__left {
+                    background: url(../assets/homeImages/homecollectionrightbottom.png) no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    width: 100%;
+                    max-width: 270px;
+                    height: 260px;
+                    background-color: #000;
+                }
+
+                .bottom__right {
+                    background: url(../assets/homeImages/homecollectionrightbottom2.png) no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    width: 100%;
+                    max-width: 270px;
+                    height: 260px;
+                    background-color: gray;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .homeCollection__wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    .homeCollection__wrapper__right__top,
+    .homeCollection__wrapper__left {
+        display: none;
+    }
+}
