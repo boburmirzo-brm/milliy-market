@@ -14,6 +14,7 @@ function CartWrap() {
             <div className='cart'>
                 <div className='cart_sort'>
                     <strong>Product</strong>
+                    <strong>Title</strong>
                     <strong>Price</strong>
                     <strong>Quantity</strong>
                     <strong>Subtotal</strong>
@@ -23,6 +24,7 @@ function CartWrap() {
                         PRODUCTS.map(product =>
                             <div className='cart_sort' key={product.id}>
                                 <img src={product.urls} alt="" />
+                                <strong>{product.title}</strong>
                                 <strong>${product.price}</strong>
                                 <div className='btn_counts'>
                                     <button className='btn_plus' onClick={() => setCount(count - 1)}>-</button>
