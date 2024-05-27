@@ -1,24 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import loginimg from '../../assets/images/login/login-img.png'
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import Input from '@mui/material/Input';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import TextField from '@mui/material/TextField';
+import { useNavigate } from 'react-router-dom';
+import { FaEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 
 
 function Login() {
-    const [showPassword, setShowPassword] = React.useState(false);
+    const [showPassword, setShowPassword] = useState(false)
+    const [username, setUsername] = useState("")
+    const [password, setPassword] = useState("")
 
-    const handleClickShowPassword = () => setShowPassword((show) => !show);
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
-    const handleMouseDownPassword = (event) => {
-        event.preventDefault();
-    };
+    const navigate = useNavigate()
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if (!username.trim() || !password.trim()) {
+            return
+        }
+    }
 
     return (
         <>
@@ -27,26 +31,19 @@ function Login() {
                 <div className="login__right">
                     <p className='login__title'>Log in to Exclusive</p>
                     <p className='login__content'>Enter your details below</p>
-                    <TextField className='login__email' id="standard-basic" label="Email or Phone Number" variant="standard" />
-                    <FormControl className='login__password' variant="standard">
-                        <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
-                        <Input
-                            id="standard-adornment-password"
-                            type={showPassword ? 'text' : 'password'}
-                            endAdornment={
-                                <InputAdornment position="end">
-                                    <IconButton
-                                        aria-label="toggle password visibility"
-                                        onClick={handleClickShowPassword}
-                                        onMouseDown={handleMouseDownPassword}
-                                    >
-                                        {showPassword ? <VisibilityOff /> : <Visibility />}
-                                    </IconButton>
-                                </InputAdornment>
+                    <form onSubmit={handleSubmit} className='loging'>
+                        <input required value={username} onChange={(e) => setUsername(e.target.value)} type="text" placeholder='Email or Phone Number' />
+                        <div className="paswword">
+                            <input required value={password} onChange={(e) => setPassword(e.target.value)} type={showPassword ? "text" : "password"} placeholder='Password' />
+                            {
+                                password &&
+                                <button className='paswword__button' onClick={() => setShowPassword(p => !p)} type='button'>
+                                    {showPassword ? <FaEyeSlash /> : <FaEye />}
+                                </button>
                             }
-                        />
-                    </FormControl>
-                    <Button className='login__button' variant="outlined">Log In</Button>
+                        </div>
+                        <Button className='login__button' type='submit' variant="outlined">Log In</Button>
+                    </form>
                 </div>
             </div>
         </>

@@ -5,13 +5,11 @@
     align-items: center;
     gap: 30px;
     margin: 55px auto;
-    margin-top: 180px;
 }
 
 .login img {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
 }
 
 .login__right {
@@ -20,14 +18,14 @@
     align-items: center;
     width: 100%;
     max-width: 370px;
-    margin: 15px auto;
+    margin: 15px 0;
 }
 
 .login__title {
     /* Heading/36PX Medium */
     width: 100%;
     color: rgb(0, 0, 0);
-    font-family: Inter;
+    font-family: Roboto-bold;
     font-size: 36px;
     font-weight: 500;
     line-height: 30px;
@@ -39,7 +37,7 @@
     /* Title/16PX Regular */
     width: 100%;
     color: rgb(0, 0, 0);
-    font-family: Poppins;
+    font-family: Roboto-bold;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -48,34 +46,94 @@
     margin-top: 14px;
 }
 
-.login__email,
-.login__password {
+
+.loging {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 33px;
     width: 100%;
-    max-width: 370px;
-    height: 32px;
-    margin: 15px auto !important;
+    margin: 20px auto;
+
+    .login__button {
+        border-radius: 4px;
+        background: rgb(219, 68, 68) !important;
+        border: none !important;
+        color: rgb(250, 250, 250) !important;
+        font-family: Roboto-bold !important;
+        font-size: 16px !important;
+        font-weight: 500 !important;
+        line-height: 24px !important;
+        letter-spacing: 0% !important;
+        text-align: center !important;
+        margin-top: 10px !important;
+        padding: 13px 40px;
+    }
 }
 
-.login__password {
-    margin-top: 20px !important;
+.loging input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 44.38px;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+    padding-left: 20px;
 }
 
-.login__button {
-    width: 143px !important;
-    height: 56px !important;
-    border-radius: 4px;
-    background: rgb(219, 68, 68) !important;
-    border: none !important;
-    color: rgb(250, 250, 250) !important;
-    font-family: Poppins !important;
-    font-size: 16px !important;
-    font-weight: 500 !important;
-    line-height: 24px !important;
-    letter-spacing: 0% !important;
-    text-align: center !important;
-    margin-top: 40px !important;
+.loging input::placeholder {
+    color: rgb(0, 0, 0);
+    font-family: Roboto-light;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    opacity: 0.4;
 }
+
+.paswword {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 46.38px;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+}
+
+.paswword input {
+    padding: 0 20px;
+    border: none;
+    outline: none;
+}
+
+.paswword input::placeholder {
+    color: rgb(0, 0, 0);
+    font-family: Roboto-light;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: left;
+    opacity: 0.4;
+}
+
+.paswword__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-right: 20px;
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+    opacity: 0.4;
+}
+
 
 @media screen and (max-width: 1032px) {
     .login img {
@@ -85,12 +143,26 @@
 
 @media screen and (max-width: 934px) {
     .login img {
-        max-width: 400px;
+        max-width: 450px;
     }
 }
 
-@media screen and (max-width:570px) {
-    .login {
-        margin-top: 130px;
+@media screen and (max-width: 882px) {
+    .login img {
+        display: none;
+    }
+
+    .login__button {
+        width: 100%;
+    }
+
+    .login__right {
+        margin: 25px auto;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .login__title {
+        font-size: 30px;
     }
 }
