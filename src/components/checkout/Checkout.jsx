@@ -1,15 +1,11 @@
+import { Button } from '@mui/material';
 import React, { useState } from 'react'
 import { PatternFormat } from 'react-number-format'
 import { useSelector } from 'react-redux'
-import payments from '../../assets/images/checkout/payment.png'
-import { FormControl, FormControlLabel, Radio, RadioGroup } from '@mui/material'
 const Checkoutcomponent = () => {
-  const [value, setValue] = useState('Bank');
+  const [more, setMore] = useState(null);
 
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-  console.log(value);
+
   const PRODUCTS = [
     {
         id: 1,
@@ -35,6 +31,30 @@ const Checkoutcomponent = () => {
         info: [],
         urls: ["https://www.imgacademy.com/sites/default/files/img-academy-housing-hero.jpg"],
         available: true,
+    },{
+        id: 3,
+        title: "title",
+        description: "desc",
+        price: 500,
+        oldPrice: 400,
+        category: "phone",
+        quantity: 2,
+        units: "dona",
+        info: [],
+        urls: ["https://www.imgacademy.com/sites/default/files/img-academy-housing-hero.jpg"],
+        available: true,
+    },{
+        id: 4,
+        title: "title",
+        description: "desc",
+        price: 500,
+        oldPrice: 400,
+        category: "phone",
+        quantity: 2,
+        units: "dona",
+        info: [],
+        urls: ["https://www.imgacademy.com/sites/default/files/img-academy-housing-hero.jpg"],
+        available: true,
     }
 ]
   // const carts = useSelector(state => state.cart.value)  
@@ -46,10 +66,12 @@ const Checkoutcomponent = () => {
             <img src={item.urls[0]} alt="" />
             <p>{item.title.slice(0,18)}</p>
         </div>
-        <p className='checkprss'>${item.price} x {item.quantity} = ${item.price * item.quantity}</p>
+        <p className='checkprss'><span>${item.price} x {item.quantity} =</span> ${item.price * item.quantity}</p>
     </li>
 ))
   const [number,setNumber] = useState(8)
+  let allproducts = product
+  product = product.slice(0,2)
   return (
     <div className='checkoutcomponent'>
       <div className='checkinputs'>
@@ -73,9 +95,12 @@ const Checkoutcomponent = () => {
       <div className='checkproducts'>
         <ul>
         {
-          product
+          more ? allproducts : product
         }
         </ul>
+        <div className='checkseemore'>
+            <Button style={{background: '#db4444',fontSize: '11px',display: 'flex', justifyContent: 'center', alignItems: 'center'}} onClick={() => setMore(!more)}>{more ? "Hide all" : "See all"}</Button>
+        </div>
         <div className='totalprice'>
             <div>
               <p>Subtotal:</p><p>${totalPrice}</p>
@@ -89,31 +114,12 @@ const Checkoutcomponent = () => {
               <p>Total:</p><p>${totalPrice}</p>
             </div>
         </div>
-        <div className="checkpayment">
-        <FormControl>
-      <RadioGroup
-        aria-labelledby="demo-controlled-radio-buttons-group"
-        name="controlled-radio-buttons-group"
-        value={value}
-        onChange={handleChange}
-      >
-          <div className='checkspace'>
-          <div>
-          <FormControlLabel value="Bank" control={<Radio />} label="Bank" />
-          </div>
-          <img src={payments} alt="" />
-          </div>
-          <div>
-          <FormControlLabel value="Cash on delivery" control={<Radio />} label="Cash on delivery" />
-          </div>
-          </RadioGroup>
-          </FormControl>
-        </div>
         <div className='checkpromo'>
             <input type="text" name="" id="" placeholder='Coupon Code' />
-            <button>Apply Coupon</button>
+            <Button style={{background: '#db4444' ,fontSize: '13px',display: 'flex', justifyContent: 'center', alignItems: 'center'}}>Apply Cupon</Button>
         </div>
-        <button className='checkorder'>Place Order</button>
+        {/* <button className='checkorder'>Place Order</button> */}
+        <Button style={{background: '#db4444',fontSize: '15px',display: 'flex', justifyContent: 'center', alignItems: 'center'}} className='checkorder' variant="contained">Place Order</Button>
       </div>
     </div>
   )
