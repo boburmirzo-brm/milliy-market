@@ -10,6 +10,8 @@ import Detail from "./pages/detail";
 import Checkout from "./pages/checkout";
 import NotFound from "./pages/not-found";
 import Wishlist from "./pages/wishlist";
+import Admin from "./pages/admin";
+import Create from "./pages/admin/create";
 
 const App = () => {
   return (
@@ -23,6 +25,9 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="admin" element={<Admin />} >
+            <Route path="create" element={<Create/>}/>
+          </Route>
           <Route path="/product/:id" element={<Detail />} />
           <Route path="*" element={<NotFound />} />
         </Route>
