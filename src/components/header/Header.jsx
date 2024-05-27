@@ -1,78 +1,95 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-import { FaChevronDown, FaHome, FaRegHeart, FaRegUser } from "react-icons/fa";
-import { CiSearch, CiHeart } from "react-icons/ci";
-import { PiShoppingCartLight } from "react-icons/pi";
+import { FaRegHeart } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
-import { IoCartOutline } from "react-icons/io5";
+import { IoSearchOutline } from "react-icons/io5";
+import { GrCart } from "react-icons/gr";
 
 import { NavLink } from 'react-router-dom';
 
-
 const Header = () => {
+  const [navShrink, setNavShrink] = useState(false)
+  const [search, setSearch] = useState(false)
+  const [searchValue, setSearchValue] = useState("")
+
+  console.log(searchValue);
+
+  useEffect(() => {
+    if (searchValue !== "") {
+      setSearch(true)
+    }
+  }, [searchValue])
+
+  const handleNavShrink = () => {
+    if (window.scrollY > 48) {
+      setNavShrink(true)
+    } else {
+      setNavShrink(false)
+    }
+  }
+
+  window.addEventListener('scroll', handleNavShrink)
+
   return (
     <>
-      <header>
-        <nav className="nav__top">
-          <div className="container nav__top__content">
-            <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <span>ShopNow</span></p>
-            <h4>English <FaChevronDown /></h4>
-          </div>
-        </nav>
-        <nav className="nav__main">
-          <div className="container nav__main__content">
-            <NavLink to="/" className="nav__logo">Exc<span>lusive</span></NavLink>
-            <div className="nav__list">
-              <NavLink to="/" className="nav__links">Home</NavLink>
-              <NavLink to="/contact" className="nav__links">Contact</NavLink>
-              <NavLink to="/about" className="nav__links">About</NavLink>
-              <NavLink to="/sing-up" className="nav__links">Sign Up</NavLink>
+      <header style={search ? { top: "48px" } : { top: "0" }} className={`header ${navShrink ? "nav__shrink" : ""} ${search ? "show__search__box" : ""}`} id='header'>
+        <nav className="nav container">
+          <NavLink className="nav__logo">Milliy Market</NavLink>
+
+          <ul className="nav__list">
+            <li className="nav__item">
+              <NavLink className="nav__link" to='/'>
+                Home
+              </NavLink>
+            </li>
+
+            <li className="nav__item">
+              <NavLink className="nav__link" to='/contact'>
+                Contact
+              </NavLink>
+            </li>
+
+            <li className="nav__item">
+              <NavLink className="nav__link" to='/about'>
+                About
+              </NavLink>
+            </li>
+
+            <li className="nav__item">
+              <NavLink className="nav__link" to='/login'>
+                Login
+              </NavLink>
+            </li>
+          </ul>
+
+          <div className="nav__actions">
+            <div className={`nav__search__box ${search ? "search__box__active" : ""}`}>
+              <input
+                onChange={(e) => setSearchValue(e.target.value)}
+                value={searchValue}
+                type="text"
+                className="nav__search__input"
+                placeholder='What are you looking for?'
+              />
+              <button onClick={() => setSearch(true)} className="nav__search__btn">
+                <IoSearchOutline />
+              </button>
             </div>
-            <div className="nav__end">
-              <div className="nav__end__content">
-                <div className="nav__search__box">
-                  <input className='search__input' type="text" placeholder='What are you looking for?' />
-                  <button className='search__button'><CiSearch /></button>
-                </div>
-                <NavLink to="/wishlist" className="nav__wishlist__link">
-                  <CiHeart />
-                  <span>0</span>
-                </NavLink>
-                <NavLink to="./cart" className="nav__cart__link">
-                  <PiShoppingCartLight />
-                  <span>0</span>
-                </NavLink>
-              </div>
-            </div>
+
+            <NavLink to="/wishlist" className="nav__wishlist__link">
+              <FaRegHeart />
+              <span>0</span>
+            </NavLink>
+
+            <NavLink to="/cart" className="nav__cart__link">
+              <GrCart />
+              <span>0</span>
+            </NavLink>
+
+            <button onClick={() => setSearch(false)} className="search__cancel__btn">Cancel</button>
           </div>
         </nav>
       </header>
-
-      {/* NAV BOTTOM */}
-
-      <div className="nav__bottom">
-        <NavLink to="/">
-          <FaHome />
-        </NavLink>
-        <button onClick={() => setShowNavBottom(p => !p)} className="nav__bottom__btn">
-          <FiMenu />
-        </button>
-        <NavLink to="/wishlist">
-          <FaRegHeart />
-          <span className='wishlist__count'>
-            0
-          </span>
-        </NavLink>
-        <NavLink to="/cart">
-          <IoCartOutline />
-          <span className='cart__count'>
-            0
-          </span>
-        </NavLink>
-        <NavLink to="/login">
-          <FaRegUser />
-        </NavLink>
-      </div>
     </>
   )
 }
