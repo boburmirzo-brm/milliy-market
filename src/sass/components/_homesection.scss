@@ -1,7 +1,7 @@
 .homeCollection {
     &__wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         gap: 20px;
@@ -25,7 +25,7 @@
 
             h4 {
                 color: rgb(250, 250, 250);
-                font-family: Inter;
+                font-family: Roboto-light;
                 font-size: 24px;
                 font-weight: 600;
                 line-height: 24px;
@@ -36,7 +36,7 @@
                 width: 100%;
                 max-width: 242px;
                 color: rgb(250, 250, 250);
-                font-family: Poppins;
+                font-family: Roboto-light;
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 21px;
@@ -47,7 +47,7 @@
                 border: none;
                 outline: none;
                 color: rgb(255, 255, 255);
-                font-family: Poppins;
+                font-family: Roboto-light;
                 font-size: 16px;
                 font-weight: 500;
                 line-height: 24px;
@@ -79,7 +79,7 @@
 
                 h4 {
                     color: rgb(250, 250, 250);
-                    font-family: Inter;
+                    font-family: Roboto-light;
                     font-size: 24px;
                     font-weight: 600;
                     line-height: 24px;
@@ -90,7 +90,7 @@
                     width: 100%;
                     max-width: 255px;
                     color: rgb(250, 250, 250);
-                    font-family: Poppins;
+                    font-family: Roboto-light;
                     font-size: 14px;
                     font-weight: 400;
                     line-height: 21px;
@@ -101,7 +101,7 @@
                     border: none;
                     outline: none;
                     color: rgb(255, 255, 255);
-                    font-family: Poppins;
+                    font-family: Roboto-light;
                     font-size: 16px;
                     font-weight: 500;
                     line-height: 24px;
@@ -112,10 +112,11 @@
 
             &__bottom {
                 display: flex;
-                flex-wrap: wrap;
                 align-items: center;
                 justify-content: space-between;
-                width: 550px;
+                width: 100%;
+                max-width: 550px;
+                margin: 0 auto;
 
                 .bottom__left {
                     background: url(../assets/homeImages/homecollectionrightbottom.png) no-repeat;
@@ -143,14 +144,119 @@
 
 @media screen and (max-width: 1000px) {
     .homeCollection__wrapper {
-        grid-template-columns: repeat(1, 1fr);
+        margin: 40px auto;
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 600px) {
+    .homeCollection__wrapper {
+        margin: 10px auto;
+    }
 
-    .homeCollection__wrapper__right__top,
     .homeCollection__wrapper__left {
-        display: none;
+        width: 100%;
+        max-width: 400px;
+        height: 280px;
+
+        h4 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        button {
+            font-size: 12px;
+        }
+    }
+
+    .homeCollection__wrapper__right__top {
+        width: 100%;
+        max-width: 455px;
+        height: 200px;
+
+        h4 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        button {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .homeCollection__wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .homeCollection__wrapper__right {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .homeCollection__wrapper__right__bottom {
+        display: flex;
+        width: 100%;
+        max-width: 500px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .bottom__left,
+        .bottom__right {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .homeCollection__wrapper__right__bottom {
+        display: flex;
+        width: 400px;
+        gap: 10px;
+
+        .bottom__left,
+        .bottom__right {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .homeCollection__wrapper__right__bottom {
+        display: flex;
+        width: 300px;
+        gap: 5px;
+
+        .bottom__left,
+        .bottom__right {
+            width: 155px;
+            height: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .homeCollection__wrapper__right__bottom {
+        display: flex;
+        width: 280px;
+        gap: 5px;
+
+        .bottom__left,
+        .bottom__right {
+            width: 155px;
+            height: 130px;
+        }
     }
 }
