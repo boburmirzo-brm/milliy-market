@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import ProductCart from "../../components/productCart/ProductCart";
 
 const Cart = () => {
   return (
     <>
-    <h2>Cart</h2>
+      <ProductCart />
     </>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;
