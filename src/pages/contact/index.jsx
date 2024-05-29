@@ -72,7 +72,7 @@ const index = () => {
                   />
                   <PatternFormat
                     value={phone}
-                    onChange={() => setPhone(e.target.value)}
+                    onChange={(e) => setPhone(e.target.value)}
                     className="contact__form__input"
                     format="+998 (##) ### ## ##"
                     allowEmptyFormatting
