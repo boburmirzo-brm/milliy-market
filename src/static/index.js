@@ -8,7 +8,10 @@ export const PRODUCTS = [
     category: "bag",
     units: "dona",
     info: [],
-    urls: ["https://www.nitryl.co.uk/wp-content/uploads/2021/12/7.jpg", "https://st.mngbcn.com/rcs/pics/static/T6/fotos/S20/67043272_02_B.jpg?ts=1699273974829&imwidth=360&imdensity=2"],
+    urls: [
+      "https://www.nitryl.co.uk/wp-content/uploads/2021/12/7.jpg",
+      "https://st.mngbcn.com/rcs/pics/static/T6/fotos/S20/67043272_02_B.jpg?ts=1699273974829&imwidth=360&imdensity=2",
+    ],
     available: true,
   },
   {
@@ -23,7 +26,8 @@ export const PRODUCTS = [
     urls: [
       "https://cdn.revendo.com/media/57/aa/1d/1696889147/apple-iphone-15-pro-max-titan-natur-guenstig-gebraucht-kaufen-00.png.png",
       "https://m.media-amazon.com/images/I/81fO2C9cYjL._AC_UF1000,1000_QL80_.jpg",
-      "https://www.apple.com/newsroom/videos/iphone-15-pro-action-button/posters/Apple-iPhone-15-Pro-lineup-Action-button-230912.jpg.large_2x.jpg"
+      "https://www.apple.com/newsroom/videos/iphone-15-pro-action-button/posters/Apple-iPhone-15-Pro-lineup-Action-button-230912.jpg.large_2x.jpg",
+      "https://m.media-amazon.com/images/I/81fO2C9cYjL._AC_UF1000,1000_QL80_.jpg",
     ],
     available: true,
   },
