@@ -20,10 +20,6 @@ const index = () => {
     <div className="contact" id="contact">
       <div className="container">
         <div className="contact__content__wrapper">
-          <div className="contact__link">
-            <NavLink to={"/"}>Home /</NavLink>
-            <NavLink to={"/contact"}> Contact</NavLink>
-          </div>
           <div className="contact__wrapper">
             <div className="contact__wrapper__left">
               <div className="contact__left__top">

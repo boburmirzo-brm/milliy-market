@@ -1,0 +1,17 @@
+.breadcrumbs {
+  padding-top: 20px;
+}
+.crumb {
+  a {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0%;
+    opacity: 0.5;
+  }
+  a.active {
+    opacity: 1;
+    color: rgb(219, 68, 68);
+  }
+}

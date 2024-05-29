@@ -92,10 +92,9 @@
     }
     &__right {
       padding: 40px 25px;
-
       width: 100%;
       border-radius: 4px;
-      box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+      box-shadow: 0px 2px 13px 0px rgba(0, 0, 0, 0.05);
       background: $bg-light;
       @media only screen and (min-width: 1200px) {
         width: 785px;
@@ -134,15 +133,12 @@
             letter-spacing: 0%;
             transition: 0.5s;
           }
-          input:focus::placeholder {
-            position: absolute;
-            top: 0px;
-            left: 5px;
-            font-size: 12px;
-            color: $bg-brown;
-          }
           input:focus {
-            border: 1px solid $bg-brown;
+            border: 1px solid rgb(188, 221, 254);
+            color: rgb(64, 191, 255);
+          }
+          input:focus::placeholder {
+            color: rgb(188, 221, 254);
           }
         }
         textarea {
@@ -160,17 +156,18 @@
             height: 207px;
           }
         }
+        textarea:focus {
+          border: 1px solid rgb(188, 221, 254);
+          color: rgb(64, 191, 255);
+        }
+        textarea:focus::placeholder {
+          color: rgb(188, 221, 254);
+        }
         textarea::placeholder {
           font-size: 14px;
           font-weight: 400;
           line-height: 24px;
           letter-spacing: 0%;
-        }
-        textarea:focus::placeholder {
-          color: $bg-brown;
-        }
-        textarea:focus {
-          border: 1px solid $bg-brown;
         }
         &__btn {
           display: flex;
