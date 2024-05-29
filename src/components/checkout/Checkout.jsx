@@ -2,6 +2,8 @@ import { Button } from '@mui/material';
 import React, { useState } from 'react'
 import { PatternFormat } from 'react-number-format'
 import { useSelector } from 'react-redux'
+import { IoIosArrowDropdown , IoIosArrowDropup   } from "react-icons/io";
+
 const Checkoutcomponent = () => {
   const [more, setMore] = useState(null);
 
@@ -99,7 +101,7 @@ const Checkoutcomponent = () => {
         }
         </ul>
         <div className='checkseemore'>
-            <Button style={{background: '#db4444',fontSize: '11px',display: 'flex', justifyContent: 'center', alignItems: 'center'}} onClick={() => setMore(!more)}>{more ? "Hide all" : "See all"}</Button>
+            <button style={{display: 'flex', justifyContent: 'center', alignItems: 'center',background: 'white'}} onClick={() => setMore(!more)}>{more ? <IoIosArrowDropup   size={30} /> : <IoIosArrowDropdown size={30} />}</button>
         </div>
         <div className='totalprice'>
             <div>
